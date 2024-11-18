@@ -1,0 +1,14 @@
+{
+	"core": "https://fr.wordpress.org/wordpress-6.7-fr_FR.zip",
+	"plugins": [
+		"."
+	],
+	"themes": [
+		"wordpress/twentytwentyfour"
+	],
+	"port": 1000,
+	"testsPort": 1001,
+	"config": {
+		"WP_DEBUG_DISPLAY": true
+	}
+}
