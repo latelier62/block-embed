@@ -1,10 +1,10 @@
 {
-	"core": "https://fr.wordpress.org/wordpress-6.7-fr_FR.zip",
+	"core": "WordPress/WordPress#master",
 	"plugins": [
 		"."
 	],
 	"themes": [
-		"wordpress/twentytwentyfour"
+		"WordPress/twentytwentyfive"
 	],
 	"port": 1000,
 	"testsPort": 1001,

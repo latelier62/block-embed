@@ -1,9 +1,9 @@
 {
 	"name": "la62embed",
-	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
+	"version": "1.0.0-dev1",
+	"description": "Embed any url inside an iframe tag.",
+	"author": "l'atelier 62",
+	"license": "GPL-2.0-only",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
@@ -16,5 +16,8 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.5.1"
+	},
+	"dependencies": {
+		"@wordpress/components": "^28.12.0"
 	}
 }

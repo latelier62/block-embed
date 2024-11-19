@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -19,7 +20,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.scss';
+import './style.scss';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -29,10 +30,34 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
+	const blockProps = useBlockProps(blockProperties);
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'La62embed – hello from the editor!', 'la62embed' ) }
-		</p>
-	);
+		<iframe {...blockProps} src={attributes.src} >
+			<InspectorControls>
+				<PanelBody title={__('Réglages', 'la62blocks')}>
+					<TextControl
+						label={__('Source du podcast (url)', 'la62blocks')}
+						value={attributes.src || ''}
+						onChange={(value) =>
+							setAttributes({src: value})
+						}
+					/>
+				</PanelBody>
+			</InspectorControls>
+		</iframe>
+)
+	;
 }
+
+const iframeStyle = {
+
+};
+
+export const blockProperties = {
+	loading: "lazy",
+	//src: "https://podcasts.audiomeans.fr/player-v2/azimut-70360b65805b/episodes/d99f820b-e3c2-4a5f-8bb9-139f01437513?mp=0&amp;download=0&amp;std=0&amp;vert=0&amp;playlist=1&amp;color=0f4292&amp;theme=light",
+	className: '',
+	frameBorder: "0",
+	style: iframeStyle
+};
