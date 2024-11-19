@@ -1,6 +1,6 @@
 {
 	"name": "la62embed",
-	"version": "1.0.0-dev1",
+	"version": "1.0.0",
 	"description": "Embed any url inside an iframe tag.",
 	"author": "l'atelier 62",
 	"license": "GPL-2.0-only",

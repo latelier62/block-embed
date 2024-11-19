@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "la62blocks/la62embed",
-	"version": "1.0.0-dev1",
-	"title": "Embed 62",
+	"version": "1.0.0",
+	"title": "l'atelier 62 block embed",
 	"category": "widgets",
-	"icon": "smiley",
+	"icon": "embed-generic",
 	"description": "IFrame pour podcast.",
 	"example": {},
 	"supports": {
